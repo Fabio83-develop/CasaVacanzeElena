@@ -1,0 +1,23 @@
+<svg width="400" height="100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style type="text/css">
+          .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            fill: #333;
+            font-weight: bold;
+          }
+          .roof {
+            fill: #fac600;
+          }
+          .house {
+            fill: #fac600;
+          }
+        </style>
+      </defs>
+      <g>
+        <polygon class="roof" points="50,40 100,10 150,40" />
+        <rect class="house" ry="5" rx="5" x="65" y="40" width="70" height="40" />
+        <text x="140" y="65" class="logo-text">Casa Vacanze Elena</text>
+      </g>
+    </svg>

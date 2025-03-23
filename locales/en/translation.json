@@ -1,0 +1,193 @@
+{
+    "nav": {
+      "home": "Home",
+      "apartment": "The Apartment",
+      "contacts": "Contacts & Location",
+      "pricing": "Price List",
+      "services": "Services",
+      "about": "About Us",
+      "reviews": "Reviews",
+      "blog": "Local Guides"
+    },
+    "hero": {
+      "welcome": "Welcome to Casa Vacanze Elena",
+      "description": "Your Roman refuge in historic Garbatella",
+      "bookNow": "Book Now"
+    },
+    "descrizione": {
+      "title": "Description",
+      "text": "Casa Vacanze Elena is a bright and recently renovated apartment designed to welcome every guest in an inclusive and accessible environment. Located just a few steps from the Garbatella neighborhood, 100 meters from the metro station on line B and 3 stops from the Colosseum, and very close to the Basilica of San Paolo and the neighborhoods of Trastevere and Testaccio, in a strategic location to explore Rome safely and conveniently.",
+      "button": "Learn more"
+    },
+    "dettagli": {
+      "buttonShow": "Learn more",
+      "buttonHide": "Hide details",
+      "title": "Property Details",
+      "spaceAndServices": {
+        "title": "Space and Services",
+        "renovation": "Recent Renovation: The apartment has been recently renovated to ensure a modern, functional, and welcoming environment.",
+        "accommodations": {
+          "title": "Accommodations:",
+          "item1": "Two spacious bedrooms with balcony, equipped with 40-inch smart TVs, with the option to add a crib on request.",
+          "item2": "A spacious living room with a sofa bed and balcony, comfortably accommodating up to six people.",
+          "item3": "Option to add a sixth bed within the sofa bed for a child (up to 12 years old)."
+        },
+        "commonAreas": {
+          "title": "Common Areas:",
+          "item1": "Dining area with a table for meals.",
+          "item2": "Relaxation area with a sofa for resting.",
+          "item3": "Large kitchen area equipped with a dishwasher, kettle, electric oven, microwave, and espresso machine."
+        },
+        "bathroom": {
+          "title": "Functional Bathroom:",
+          "item1": "A large and comfortable bathroom with a window, featuring two sinks integrated in a cabinet with drawers, two mirrors, a bidet, and a spacious shower with a glass enclosure.",
+          "item2": "Includes a washing machine for maximum convenience."
+        },
+        "outdoorSpaces": "<strong>Outdoor Spaces:</strong> Two balconies ideal for relaxing, sunbathing, and drying laundry.",
+        "freeServices": "<strong>Free Services:</strong> Wi-Fi and two safes (one per room) are provided free of charge to ensure maximum comfort.",
+        "locationAccessibility": "<strong>Location and Accessibility:</strong> The apartment is located on the first floor of an elegant building with an elevator, making it suitable for people with disabilities."
+      },
+      "safetyInclusivity": {
+        "title": "Commitment to Safety and Inclusivity",
+        "text": "Casa Vacanze Elena is committed to creating a welcoming and inclusive environment for every guest, in compliance with current health regulations. Thorough cleaning of the apartment and linens is a top priority to ensure the safety and well-being of everyone staying here."
+      },
+      "additionalNotes": {
+        "title": "Additional Notes",
+        "item1": "<strong>Extra Bed:</strong> Adding a sixth bed for a child (up to 12 years old) incurs an additional cost of €30 per night.",
+        "item2": "<strong>Pet Policy:</strong> Small and medium-sized pets are welcome, with an additional charge of €60 per stay.",
+        "item3": "<strong>Registration Number (CIN):</strong> IT058091C2A98L3HFB"
+      }
+    },
+    "reviews": {
+      "all": "Read all reviews"
+    },
+    "contacts": {
+      "title": "Contacts, Reservations & Location",
+      "contactsTitle": "Contacts and Reservations",
+      "contactsText": "Request information or book your stay by filling out the form below.",
+      "callNow": "Call now: +39 3421613897",
+      "namePlaceholder": "Name",
+      "phonePlaceholder": "Phone",
+      "checkinLabel": "Arrival Date:",
+      "checkoutLabel": "Departure Date:",
+      "guestsPlaceholder": "Number of Guests",
+      "messagePlaceholder": "Message",
+      "submitButton": "Send Request",
+      "airbnbText": "Prefer to book on Airbnb?",
+      "airbnbLink": "Click here",
+      "positionTitle": "Location",
+      "positionText": "Located in historic Garbatella, the apartment offers an authentic Roman experience with easy access to the metro and the city's main attractions.",
+      "howToReachTitle": "How to Reach Us",
+      "howToReachText": "The neighborhood is easily accessible by car and public transport.",
+      "byCar": "<strong>By car:</strong>",
+      "byCarText": "From both Leonardo da Vinci–Fiumicino and Ciampino airports, the apartment can be reached in about 25 minutes. Additionally, for those arriving by car, free parking is available right in front of the house.",
+      "byPublicTransport": "By public transport:",
+      "transportFiumicino": "<strong>From Fiumicino:</strong> Take a regional train to Ostiense station (exit Piazzale 12 Ottobre 1942) in about 35 minutes. Then walk 10 minutes. Alternatively, take the Leonardo Express to Termini (about 32 minutes), then the Metro Line B towards Laurentina; get off at Garbatella (exit Via Giacinto Pullino) and walk about 100 meters.",
+      "transportCiampino": "<strong>From Ciampino:</strong> Take a shuttle bus to Termini and follow the same route as from Fiumicino.",
+      "transportTermini": "<strong>From Termini:</strong> Take Metro Line B directly to the Garbatella stop (exit Via Giacinto Pullino) and walk about 100 meters.",
+      "transportTiburtina": "<strong>From Tiburtina:</strong> Metro Line B takes about 22 minutes to reach the apartment.",
+      "toggleHowToReach": "Learn how to get around",
+      "buttonHide": "Hide details",
+      "howToReachSubTitle": "Getting Around",
+      "howToReachSubText": "Casa Vacanze Elena is located in Circonvallazione Ostiense, just a few steps from historic Garbatella, one of Rome's most charming and authentic neighborhoods. Its location is ideal for exploring the city, as the apartment is near lively areas with many bars and restaurants such as Trastevere, Testaccio, and Ostiense, and it is easily accessible to the main campuses of Roma Tre University. The area is well-served by public transport, making travel quick and convenient.",
+      "howToReachSubItem1": "<strong>Public transport connections:</strong>",
+      "howToReachSubItem2": "100 meters from Garbatella metro station (Line B, exit Via Giacinto Pullino).",
+      "howToReachSubItem3": "3 stops from the Colosseum and 5 stops from Termini station (connection with Line A and national/international trains).",
+      "howToReachSubItem4": "Metro Line B easily connects to EUR and Roma-Lido train for Ostia.",
+      "howToReachSubItem5": "<strong>Nearby buses:</strong>",
+      "howToReachSubItem6": "Bus stops #715 and #716, 100 meters away, leading to Piazza Venezia and Via del Corso in 15 minutes.",
+      "howToReachSubItem7": "Bus stop #792 under the apartment for San Giovanni in Laterano in 15 minutes.",
+      "howToReachSubItem8": "Bus stop #23, 500 meters away, to explore the Tiber and visit attractions such as Testaccio, the Jewish Ghetto, Trastevere, Campo de' Fiori, and the Vatican.",
+      "howToReachSubItem9": "<strong>Access to the Vatican:</strong>",
+      "howToReachSubItem10": "14 minutes on foot from Ostiense station, with a train to St. Peter in just 8 minutes.",
+      "howToReachSubConclusion": "In summary, Casa Vacanze Elena is perfectly positioned for those who wish to explore Rome easily, thanks to its proximity to public transport and tourist attractions, as well as for those who want to experience the authentic atmosphere of Rome's historic neighborhoods and traditions."
+    },
+    "pricing": {
+      "title": "Price List (up to 4 guests)",
+      "nightlyRates": "Nightly Rates",
+      "season": "Season",
+      "pricePerNight": "Price per Night",
+      "lowSeason": "Low Season",
+      "lowSeasonInfo": "(January, February, November, December)",
+      "mediumSeason": "Medium Season",
+      "mediumSeasonInfo": "(July, August)",
+      "highSeason": "High Season",
+      "highSeasonInfo": "(March, April, May, June, September, October)",
+      "taxesAndFees": "Taxes and Surcharges",
+      "touristTaxLabel": "Tourist Tax:",
+      "touristTaxInfo": "€5 per night (exempt for children under 10)",
+      "cleaningLabel": "Cleaning:",
+      "cleaningInfo": "€50 per stay (mandatory)",
+      "animalsLabel": "Pets:",
+      "animalsInfo": "€50 per stay (upon request)",
+      "cradleLabel": "Crib:",
+      "cradleInfo": "€50 per stay (upon request)",
+      "fifthBedLabel": "5th Bed:",
+      "fifthBedInfo": "€30 per night (upon request)",
+      "sixthBedLabel": "6th Bed:",
+      "sixthBedInfo": "€30 per night (upon request)",
+      "paymentMethods": "Payment Methods",
+      "paymentInfo": "20% upon booking via bank transfer<br>80% at check-in (bank transfer, PayPal, debit card, or cash)",
+      "note": "The indicated prices are approximate and may vary due to promotions, discounts, last-minute offers, or other factors.<br>The final prices and updated terms will be communicated at the time of booking."
+    },
+    "about": {
+      "title": "About Us",
+      "text": "We are a Roman family dedicated to the art of hospitality. At Casa Vacanze Elena, we offer a stay that combines comfort, authenticity, and the warmth of traditions. Since 2023, Roberta, a superhost, and her daughter Beatrice, a cohost, put passion into every detail to make you feel truly at home."
+    },
+    "servicesRules": {
+      "title": "House Services & Rules",
+      "servicesTitle": "Services",
+      "service": {
+        "wifi": "High-speed Wi-Fi",
+        "ac": "Air conditioning and heating",
+        "smartTV": "Smart TV",
+        "laundry": "Linens and towels provided",
+        "kitchen": "Fully equipped kitchen",
+        "washer": "Washer",
+        "selfCheckIn": "Self check-in",
+        "livingRoom": "Spacious and comfortable living room",
+        "hairdryer": "Hairdryer",
+        "safe": "Safe",
+        "elevator": "Elevator",
+        "pets": "Pets allowed"
+      },
+      "details": {
+        "wifiTitle": "Wi-Fi Internet Connection Included",
+        "wifiDescription": "High-speed connection for streaming and uninterrupted work.",
+        "kitchenTitle": "Kitchen with Oven, Microwave, Kettle, Dishwasher",
+        "kitchenDescription": "The kitchen is fully equipped to meet every culinary need.",
+        "diningTitle": "Dining Area with Table and Chairs",
+        "diningDescription": "An ideal space for family meals.",
+        "bathroomTitle": "Modern Bathroom with Shower and Washing Machine",
+        "bathroomDescription": "The bathroom is equipped with all the modern comforts for your relaxation.",
+        "bedroomsTitle": "Two Bedrooms with Smart TV",
+        "bedroomsDescription": "Spacious and comfortable rooms to ensure a rejuvenating rest.",
+        "balconiesTitle": "Outdoor Balconies for Relaxation and Clothes Drying",
+        "balconiesDescription": "Enjoy the fresh air and sunshine on our large balconies."
+      },
+      "rulesTitle": "House Rules",
+      "rulesIntro": "We ask you to treat the apartment with the utmost care and respect, as if it were your own home. This will help ensure a pleasant experience for you and future guests.",
+      "checkInOut": {
+        "title": "Check-in and Check-out",
+        "checkIn": "Check-in after 3:00 PM",
+        "checkOut": "Check-out by 10:00 AM",
+        "selfCheckInPrefix": "Self check-in with",
+        "selfCheckInLink": "electronic lock"
+      },
+      "duringStay": {
+        "title": "During Your Stay",
+        "maxGuests": "Maximum 6 guests",
+        "petsAllowed": "Pets allowed",
+        "quietHours": "Quiet hours: 10:00 PM - 8:00 AM",
+        "noParties": "No parties/events allowed",
+        "advertisingAllowed": "Advertising photography allowed",
+        "noSmoking": "No smoking allowed"
+      }
+    },
+    "blog": {
+      "title": "Local Guides",
+      "articleTitle": "What to See in Garbatella",
+      "articleText": "Garbatella is a neighborhood in Rome with authentic charm, born in the early 20th century and originally characterized by a 'village-like' atmosphere. Today, while maintaining the calm and conviviality typical of local communities, it is emerging as a trendy area. Its low-rise houses, organized in clusters around courtyards and gardens, create spaces for meeting and everyday life. The neighborhood hosts numerous historical and cultural landmarks, such as small churches and monuments that testify to its past, as well as symbolic routes like the famous 'Seven Churches Road', which once guided devotees on traditional pilgrimages. Garbatella is also renowned for its informal culinary scene: characteristic local eateries serve typical Roman dishes, from pizza by the slice to meat specialties, accompanied by gelaterias that highlight local products. This summary makes Garbatella an ideal destination for those seeking a genuine and less touristy experience in Rome.",
+      "readMore": "Read more"
+    }
+  }

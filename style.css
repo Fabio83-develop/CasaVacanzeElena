@@ -1,0 +1,1145 @@
+/* =========================================
+  1. Base Styles
+========================================= */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  /* una tonalità di grigio morbida */
+  background-color: #f7f5f2;
+  /* un caldo color crema */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 0;
+  color: #2c2c2c;
+}
+
+/* =========================================
+  2. Containers & Header
+========================================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+  border-bottom: 1px solid #e0dcd1;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* =========================================
+  3. Navigazione
+========================================= */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #bfa06d;
+}
+
+/* =========================================
+  4. Hero Section
+========================================= */
+.hero {
+  position: relative;
+  background: url('./immagini/sfondo4.jpg') no-repeat center center/cover;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 6em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #f0f0f0;
+}
+
+.hero button {
+  background-color: #bfa06d;
+  color: #fff;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #a89264;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #appartamento h2 {
+    font-size: 2.5em !important;
+    text-align: center;
+  }
+}
+
+/* =========================================
+  5. Sezioni Generali
+========================================= */
+.section {
+  padding: 2em 0;
+}
+
+/* =========================================
+  6. Sezione Descrizione
+========================================= */
+.descrizione-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.descrizione-testo,
+.descrizione-immagine {
+  flex: 1;
+  text-align: center;
+}
+
+.descrizione-testo h2 {
+  font-size: 3.5em;
+}
+
+.descrizione-testo p {
+  text-align: justify;
+  font-size: 1.3em;
+}
+
+.descrizione-immagine img {
+  width: 80%;
+  height: auto;
+  border-radius: 4px;
+  max-width: 300px;
+}
+
+.scopri-di-piu {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #bfa06d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.scopri-di-piu:hover {
+  background-color: #a89264;
+}
+
+/* Media query per Sezione Descrizione */
+@media (max-width: 768px) {
+  .descrizione-container {
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+  7. Sezione Dettagli & Appartamento
+========================================= */
+.dettagli {
+  padding: 2em 0;
+  background-color: #f7f5f2;
+  margin-top: 2em;
+}
+
+#appartamento h2 {
+  font-size: 3.5em;
+}
+
+/* =========================================
+  8. Galleria Fotografica
+========================================= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.gallery a {
+  display: block;
+  /* Imposta ogni link a occupare esattamente un terzo dello spazio, considerando il gap */
+  flex: 0 0 calc(33.333% - 1em);
+}
+
+.gallery a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================
+  9. Sezione Recensioni
+========================================= */
+#recensioni h2 {
+  font-size: 2.8em;
+}
+
+.recensioni-container {
+  text-align: left;
+}
+
+.recensioni-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.recensione-card {
+  flex: 1 1 30%;
+  background-color: #fff;
+  border: 1px solid #e0dcd1;
+  padding: 1.5em;
+  border-radius: 8px;
+  max-width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recensione-header {
+  margin-bottom: 0.8em;
+}
+
+.recensione-header h3 {
+  margin: 0;
+  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+}
+
+.review-date {
+  font-size: 0.9em;
+  color: #888;
+  margin: 0.2em 0 0;
+}
+
+.recensione-text {
+  font-size: 1em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.recensioni-container a {
+  color: #bfa06d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.recensioni-container a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .recensioni-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .recensione-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  #recensioni h2 {
+    font-size: 2.5em !important;
+    text-align: center;
+  }
+}
+
+/* =========================================
+  10. Form di Contatto
+========================================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form input,
+form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button {
+  box-sizing: border-box;
+  background-color: #bfa06d;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 8px;
+}
+
+form button:hover {
+  background-color: #a89264;
+  transform: translateY(-2px);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #bfa06d;
+  box-shadow: 0 0 5px rgba(191, 160, 109, 0.5);
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+  10. Airbnb Badge
+========================================= */
+.airbnb-badge {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.airbnb-badge img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* =========================================
+  11. Sezione Contatti e Posizione
+========================================= */
+
+/* Layout per Contatti e Posizione */
+.contact-position-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+  align-items: stretch;
+}
+
+.contact-section {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+.contact-section,
+.position-section {
+  flex: 1 1 50%;
+  /* Ciascuna occupa il 50% dello spazio disponibile */
+  /* Se desideri, puoi impostare anche un min-width per evitare riduzioni eccessive */
+  min-width: 200px;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #2c2c2c;
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #bfa06d;
+  box-shadow: 0 0 5px rgba(191, 160, 109, 0.5);
+  outline: none;
+}
+
+
+.contact-section button {
+  background-color: #bfa06d;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #a89264;
+  transform: translateY(-2px);
+}
+
+.contact-section a {
+  color: #bfa06d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.phone-contact {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.phone-contact a {
+  display: inline-flex;
+  align-items: center;
+  color: #bfa06d;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.phone-contact a:hover {
+  color: #a89264;
+  text-decoration: underline;
+}
+
+.phone-contact .phone-icon {
+  width: 45px;
+  height: auto;
+  margin-right: 0.5em;
+}
+
+.position-section {
+  flex: 1 1 50%;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+/* Media query per Contatti e Posizione */
+@media (max-width: 768px) {
+
+  .contact-flex,
+  .contact-position-flex {
+    flex-direction: column;
+  }
+}
+
+#contatti-posizione h2 {
+  font-size: 2.8em;
+  /* Regola questo valore per ottenere l'effetto desiderato */
+}
+
+@media (max-width: 768px) {
+  #contatti-posizione h2 {
+    font-size: 2.5em !important;
+    text-align: center;
+  }
+}
+
+.map-container {
+  margin-top: 1em;
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  /* Rapporto 4:3: (450/600)*100% */
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Contenitore per la colonna destra */
+.right-column {
+  flex: 1 1 50%;
+  /* Occupa il 50% dello spazio disponibile */
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* Spazio verticale tra i blocchi */
+}
+
+.come-raggiungerci {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per la sezione Listino Prezzi */
+.listino-prezzi {
+  background: #f7f5f2;
+  padding: 20px;
+  border: 2px solid #bfa06d;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.listino-prezzi h3 {
+  color: #bfa06d;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.listino-prezzi h4 {
+  color: #2c2c2c;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Stile per la tabella delle tariffe */
+.listino-prezzi-tabella {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.listino-prezzi-tabella thead tr {
+  background-color: #bfa06d;
+  color: #fff;
+}
+
+.listino-prezzi-tabella th,
+.listino-prezzi-tabella td {
+  padding: 10px;
+  text-align: center;
+}
+
+.listino-prezzi-tabella tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Stile per l'elenco delle maggiorazioni */
+.listino-prezzi ul {
+  list-style: none;
+  padding: 0;
+}
+
+.listino-prezzi ul li {
+  padding: 5px 0;
+}
+
+/* =========================================
+  12. Chi Siamo
+========================================= */
+
+/* Stile per la sezione Chi Siamo */
+#chi-siamo {
+  padding: 3em 0;
+  text-align: center;
+  color: #444;
+  /* stesso colore del body */
+}
+
+#chi-siamo h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #2c2c2c;
+}
+
+#chi-siamo p {
+  font-size: 1.3em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =========================================
+  13. Footer
+========================================= */
+.footer-container {
+  padding: 1em 0;
+  background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer-social {
+  margin-bottom: 0.5em;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 0.5em;
+  color: #fff;
+  font-size: 1.5em;
+  /* se usi Font Awesome */
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #bfa06d;
+}
+
+/* Se usi immagini per le icone */
+.social-icon {
+  width: 24px;
+  height: auto;
+}
+
+.footer-links {
+  margin: 0.5em 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #bfa06d;
+}
+
+/* =========================================
+  14. Pulsante "Back to Top"
+========================================= */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #bfa06d;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+/* =========================================
+  15. Sezione Cokies
+========================================= */
+/* Stili per il banner dei cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f7f5f2;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+}
+
+.cookie-banner p {
+  margin: 0 0 0.5em;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.cookie-banner a {
+  color: #bfa06d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cookie-banner button {
+  background-color: #bfa06d;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0 0.3em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background-color: #a89264;
+}
+
+/* =========================================
+  15. Sezione Servizi e Regole
+========================================= */
+/* Stile per il blocco Servizi */
+
+#servizi-regole h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+/* --- Sezione Servizi (icone + testo sintetico) --- */
+/* Griglia delle card */
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.servizio {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servizio:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.servizio i {
+  font-size: 2em;
+  color: #bfa06d;
+  /* Colore icona */
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+
+.servizio span {
+  display: block;
+  font-weight: 600;
+  color: #444;
+  margin-top: 0.3em;
+}
+
+/* Elenco puntato aggiuntivo */
+.servizi-dettagli {
+  list-style: disc inside;
+  color: #444;
+  margin: 0 auto;
+  max-width: 700px;
+  /* Larghezza massima per centrare il testo */
+  font-size: 1em;
+}
+
+.servizi-dettagli li {
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+#servizi-regole .servizi {
+  background-color: #f7f5f2;
+  /* stesso background del body */
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
+}
+
+#servizi-regole .servizi h3 {
+  font-size: 1.6em;
+  color: #2c2c2c;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+/* Stile per il blocco Regole - meno appariscente */
+#servizi-regole .regole {
+  background-color: #f7f5f2;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* stesso effetto di bordo */
+  margin-top: 2em;
+  text-align: left;
+  opacity: 0.85;
+}
+
+#servizi-regole .regole h3 {
+  font-size: 1.6em;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+#servizi-regole .regole h4 {
+  font-size: 1.2em;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.2em;
+}
+
+#servizi-regole .regole-intro {
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: justify;
+}
+
+#servizi-regole .regole-section {
+  margin-bottom: 1.5em;
+}
+
+#servizi-regole .regole-section h4 {
+  font-size: 1.5em;
+  color: #2c2c2c;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #bfa06d;
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
+
+#servizi-regole .regole-section ul {
+  list-style: disc inside;
+  margin-left: 1em;
+  color: #444;
+}
+
+#servizi-regole .regole-section ul li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.servizi-tabella {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  /* Spazio verticale fra le righe */
+  margin: 1em auto;
+}
+
+.servizi-tabella td {
+  padding: 0.5em 1em;
+  vertical-align: top;
+}
+
+.servizio-label {
+  width: 40%;
+  text-align: left;
+}
+
+.servizio-descrizione {
+  width: 60%;
+  text-align: left;
+  color: #555;
+  font-size: 1em;
+}
+
+/* Opzionale: aggiungi una linea separatrice tra le righe */
+.servizi-tabella tr {
+  border-bottom: 1px solid #eee;
+}
+
+.servizio img {
+  width: 2em;
+  /* dimensione simile alle icone Font Awesome */
+  height: auto;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  color: #bfa06d;
+}
+
+.servizio {
+  color: #bfa06d;
+  /* Imposta il colore che verrà ereditato dall'SVG */
+}
+
+.servizio svg {
+  display: inline-block !important;
+  margin: 0 auto 0.5em;
+}
+
+.servizio.asciugacapelli svg {
+  width: 2em !important;
+  height: auto !important;
+  margin: 0 auto 0.5em;
+}
+
+.checkin-link {
+  color: #bfa06d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.checkin-link:hover {
+  color: #a89264;
+}
+
+/* Sezione Guide Locali / Blog */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+  justify-items: center;
+}
+
+.blog-card {
+  background-color: #fff;
+  border: 1px solid #e0dcd1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-content {
+  padding: 1.5em;
+}
+
+.blog-content h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0.5em;
+  color: #2c2c2c;
+}
+
+.blog-content p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #bfa06d;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #a89264;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #blog h2 {
+    font-size: 2.5em !important;
+    text-align: center;
+  }
+}
+
+/* Pulsante menu: nascosto di default */
+.menu-toggle {
+  display: none;
+}
+
+/* Regole per dispositivi mobili */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: #444;
+    position: fixed;
+    /* Imposta il pulsante in posizione fissa */
+    top: 20px;
+    /* Regola la distanza dal top */
+    right: 10px;
+    /* Regola la distanza dal lato destro */
+    z-index: 1100;
+    /* Assicurati che sia sempre in primo piano */
+  }
+
+  /* Menu mobile: posizionato fisso in alto a sinistra */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* sfondo bianco traslucido */
+    position: fixed;
+    /* posizione fissa rispetto alla finestra */
+    top: 60px;
+    /* regola in base all'altezza del header */
+    right: 0;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* posiziona il menu sopra gli altri elementi */
+  }
+
+  /* Visualizza il menu quando attivato */
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Sistema i link per la visualizzazione verticale */
+  nav ul li {
+    margin: 0.5em 0;
+    text-align: right;
+  }
+
+}
+
+/* Modale: sfondo semi-trasparente fullscreen */
+.modal {
+  position: fixed;
+  z-index: 2000; /* sopra altri elementi */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* se il contenuto sfora la finestra */
+  background-color: rgba(0, 0, 0, 0.5); /* sfondo scuro traslucido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nascondiamo la modale quando ha classe .hidden */
+.modal.hidden {
+  display: none;
+}
+
+/* Contenuto vero e proprio della modale */
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2em;
+  max-width: 400px;
+  width: 80%;
+  position: relative;
+  text-align: center;
+}
+
+/* Icona di chiusura in alto a destra */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+/* Icona successo/errore */
+.modal-icon {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+/* Esempio di colore per l’icona di successo (verde) e d’errore (rosso) */
+.modal-icon.success {
+  color: #4caf50; /* verde */
+}
+
+.modal-icon.error {
+  color: #f44336; /* rosso */
+}
+
+.listino-note {
+  font-style: italic;
+  /*background-color: #fff3cd; /* colore di evidenziazione (giallo chiaro) */
+  padding: 10px;
+  border: 1px solid #bfa06d;
+  border-radius: 4px;
+  margin-top: 20px;
+}

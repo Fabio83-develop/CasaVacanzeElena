@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100">
+  <defs>
+    <style type="text/css">
+      .roof { fill: #fac600; }
+      .house { fill: #fac600; }
+    </style>
+  </defs>
+  <g>
+    <polygon points="0,45 50,15 100,45" class="roof"></polygon>
+    <rect height="40" width="70" y="45" x="15" ry="5" rx="5" class="house"></rect>
+  </g>
+</svg>

@@ -1,0 +1,193 @@
+{
+    "nav": {
+      "home": "Home",
+      "apartment": "L’Appartamento",
+      "contacts": "Contatti & Posizione",
+      "pricing": "Listino Prezzi",
+      "services": "Servizi",
+      "about": "Chi Siamo",
+      "reviews": "Recensioni",
+      "blog": "Guide Locali"
+    },
+    "hero": {
+      "welcome": "Benvenuti a Casa Vacanze Elena",
+      "description": "Il tuo rifugio romano nella storica Garbatella",
+      "bookNow": "Prenota Ora"
+    },
+    "descrizione": {
+      "title": "Descrizione",
+      "text": "Casa Vacanze Elena è un appartamento luminoso e recentemente ristrutturato, pensato per accogliere ogni ospite in un ambiente inclusivo e accessibile. Situata a pochi passi dal quartiere Garbatella, a 100 metri dalla fermata della Metropolitana linea B e 3 fermate dal Colosseo e molto vicina alla Basilica di San Paolo e ai quartieri Trastevere e Testaccio, in una posizione strategica per esplorare Roma in tutta sicurezza e comodità.",
+      "button": "Scopri di più"
+    },
+    "dettagli": {
+      "buttonShow": "Scopri di più",
+      "buttonHide": "Nascondi dettagli",
+      "title": "Dettagli dell'Alloggio",
+      "spaceAndServices": {
+        "title": "Lo Spazio e i Servizi",
+        "renovation": "Ristrutturazione Recente: L'appartamento è stato recentemente ristrutturato per garantire un ambiente moderno, funzionale e accogliente.",
+        "accommodations": {
+          "title": "Sistemazioni:",
+          "item1": "Due ampie camere da letto, con balcone, dotate di smart TV da 40 pollici, in cui è possibile aggiungere una culla su richiesta.",
+          "item2": "Un soggiorno spazioso con divano (letto) e balcone, che può ospitare comodamente fino a sei persone.",
+          "item3": "Possibilità di aggiungere “nel divano letto” un sesto posto letto per un bambino (fino a 12 anni)."
+        },
+        "commonAreas": {
+          "title": "Aree Comuni:",
+          "item1": "Zona pranzo con tavolo per i pasti.",
+          "item2": "Area relax con divano per momenti di riposo.",
+          "item3": "Grande angolo cottura attrezzato con lavastoviglie, bollitore, forno elettrico, microonde e macchinetta per il caffè espresso."
+        },
+        "bathroom": {
+          "title": "Bagno Funzionale:",
+          "item1": "Un bagno grande e confortevole con finestra, con due lavabi integrati in un mobile con cassetti, due specchi, un bidet e una grande doccia con box in cristallo.",
+          "item2": "Presenza di una lavatrice per la massima praticità."
+        },
+        "outdoorSpaces": "<strong>Spazi Esterni:</strong> Due balconi ideali per rilassarsi, prendere il sole e stendere il bucato.",
+        "freeServices": "<strong>Servizi Gratuiti:</strong> Wi-Fi e due casseforti (una per ogni stanza) sono messi a disposizione gratuitamente per garantire il massimo comfort.",
+        "locationAccessibility": "<strong>Ubicazione e Accessibilità:</strong> L'appartamento si trova al primo piano di un raffinato condominio dotato di ascensore, rendendolo adatto anche a persone con disabilità."
+      },
+      "safetyInclusivity": {
+        "title": "Impegno per la Sicurezza e l'Inclusività",
+        "text": "Casa Vacanze Elena si impegna a creare un ambiente accogliente e inclusivo per ogni ospite, nel rispetto delle disposizioni sanitarie vigenti. La perfetta sanificazione dell’appartamento e della biancheria è una priorità per garantire la sicurezza e il benessere di chiunque scelga di soggiornare qui."
+      },
+      "additionalNotes": {
+        "title": "Note Aggiuntive",
+        "item1": "<strong>Posto Letto Extra:</strong> L'aggiunta del sesto posto letto per un bambino (fino a 12 anni) comporta un costo aggiuntivo di 30€ a notte.",
+        "item2": "<strong>Accoglienza degli Animali:</strong> Gli animali di piccola e media taglia sono i benvenuti, con un costo aggiuntivo di 60€ per soggiorno.",
+        "item3": "<strong>Numero di Registrazione CIN:</strong> IT058091C2A98L3HFB"
+      }
+    },
+    "reviews": {
+      "all": "Leggi tutte le recensioni"
+    },
+    "contacts": {
+      "title": "Contatti, Prenotazioni e Posizione",
+      "contactsTitle": "Contatti e Prenotazioni",
+      "contactsText": "Richiedi informazioni o prenota il tuo soggiorno compilando il modulo sottostante.",
+      "callNow": "Chiama ora: +39 3421613897",
+      "namePlaceholder": "Nome",
+      "phonePlaceholder": "Telefono",
+      "checkinLabel": "Data di Arrivo:",
+      "checkoutLabel": "Data di Partenza:",
+      "guestsPlaceholder": "Numero di Ospiti",
+      "messagePlaceholder": "Messaggio",
+      "submitButton": "Invia Richiesta",
+      "airbnbText": "Preferisci prenotare su Airbnb?",
+      "airbnbLink": "Clicca qui",
+      "positionTitle": "Posizione",
+      "positionText": "Situato nella storica Garbatella, l’appartamento offre un’autentica esperienza romana con facile accesso alla metro e alle principali attrazioni della città.",
+      "howToReachTitle": "Come raggiungerci",
+      "howToReachText": "Il quartiere è facilmente raggiungibile sia in macchina che con i mezzi pubblici.",
+      "byCar": "<strong>In macchina:</strong>",
+      "byCarText": "Dall’aeroporto Leonardo da Vinci–Fiumicino o da quello di Roma–Ciampino, l’appartamento è raggiungibile in circa 25 minuti. Inoltre, per chi arriva in auto, è disponibile un parcheggio libero proprio di fronte alla casa.",
+      "byPublicTransport": "Con i mezzi pubblici:",
+      "transportFiumicino": "<strong>Da Fiumicino:</strong> Prendi un treno regionale che ti porta alla stazione Ostiense (uscita Piazzale 12 Ottobre 1942) in circa 35 minuti. Da lì cammina per 10 minuti. Oppure prendi il Leonardo Express fino a Termini (circa 32 minuti) e poi la Metro Linea B in direzione Laurentina; scendi a Garbatella (uscita Via Giacinto Pullino) e cammina per circa 100 metri.",
+      "transportCiampino": "<strong>Da Ciampino:</strong> Usa un bus navetta fino a Termini e segui lo stesso percorso indicato per Fiumicino.",
+      "transportTermini": "<strong>Da Termini:</strong> Prendi direttamente la Metro Linea B fino alla fermata Garbatella (uscita Via Giacinto Pullino) e prosegui a piedi per 100 metri.",
+      "transportTiburtina": "<strong>Da Tiburtina:</strong> La Metro Linea B impiega circa 22 minuti per portarti all’appartamento.",
+      "toggleHowToReach": "Scopri come muoversi in zona",
+      "buttonHide": "Nascondi dettagli",
+      "howToReachSubTitle": "Muoversi in zona",
+      "howToReachSubText": "Casa Vacanze Elena si trova in Circonvallazione Ostiense, a pochi passi dallo storico quartiere Garbatella, una delle zone più affascinanti e autentiche di Roma. La posizione è ideale per esplorare la città, in quanto l’appartamento è vicino a vivaci zone con molti locali e ristoranti, oltre ad essere facilmente accessibile alle principali facoltà dell'Università degli Studi di Roma Tre. La zona è ben servita dai mezzi pubblici, rendendo gli spostamenti rapidi e comodi.",
+      "howToReachSubItem1": "<strong>Collegamenti con i mezzi pubblici:</strong>",
+      "howToReachSubItem2": "A 100 metri dalla fermata della Metropolitana Garbatella (Linea B, uscita Via Giacinto Pullino).",
+      "howToReachSubItem3": "A 3 fermate dal Colosseo e a 5 fermate dalla stazione Termini (connessione con la linea A e treni nazionali/internazionali).",
+      "howToReachSubItem4": "La Metro Linea B collega facilmente all'EUR e al treno Roma-Lido per Ostia.",
+      "howToReachSubItem5": "<strong>Autobus nelle vicinanze:</strong>",
+      "howToReachSubItem6": "Fermata autobus #715 e #716 a 100 metri, che porta a Piazza Venezia e Via del Corso in 15 minuti.",
+      "howToReachSubItem7": "Fermata autobus #792 sotto l'appartamento per San Giovanni in Laterano in 15 minuti.",
+      "howToReachSubItem8": "Fermata autobus #23 a 500 metri per esplorare il Lungotevere e visitare attrazioni come Testaccio, il Ghetto Ebraico, Trastevere, Campo de' Fiori e il Vaticano.",
+      "howToReachSubItem9": "<strong>Accesso alla Città del Vaticano:</strong>",
+      "howToReachSubItem10": "A 14 minuti a piedi dalla stazione Ostiense, con treno per San Pietro in soli 8 minuti.",
+      "howToReachSubConclusion": "In sintesi, Casa Vacanze Elena è perfettamente posizionata per chi desidera esplorare Roma con facilità, grazie alla sua vicinanza a mezzi pubblici e attrazioni turistiche, oltre a permettere di vivere l’atmosfera autentica dei quartieri storici e delle tradizioni romane."
+    },
+    "pricing": {
+      "title": "Listino Prezzi (fino a 4 persone)",
+      "nightlyRates": "Tariffe per Notte",
+      "season": "Stagione",
+      "pricePerNight": "Prezzo per Notte",
+      "lowSeason": "Bassa Stagione",
+      "lowSeasonInfo": "(Gennaio, Febbraio, Novembre, Dicembre)",
+      "mediumSeason": "Media Stagione",
+      "mediumSeasonInfo": "(Luglio, Agosto)",
+      "highSeason": "Alta Stagione",
+      "highSeasonInfo": "(Marzo, Aprile, Maggio, Giugno, Settembre, Ottobre)",
+      "taxesAndFees": "Tasse e Maggiorazioni",
+      "touristTaxLabel": "Tassa di soggiorno:",
+      "touristTaxInfo": "5€ a notte (minori di 10 anni esenti)",
+      "cleaningLabel": "Pulizie:",
+      "cleaningInfo": "50€ a soggiorno (obbligatorie)",
+      "animalsLabel": "Animali:",
+      "animalsInfo": "50€ a soggiorno (su richiesta)",
+      "cradleLabel": "Culla:",
+      "cradleInfo": "50€ a soggiorno (su richiesta)",
+      "fifthBedLabel": "5° letto:",
+      "fifthBedInfo": "30€ a notte (su richiesta)",
+      "sixthBedLabel": "6° letto:",
+      "sixthBedInfo": "30€ a notte (su richiesta)",
+      "paymentMethods": "Modalità di Pagamento",
+      "paymentInfo": "20% alla prenotazione con bonifico<br>80% in struttura al check-in (bonifico bancario, PayPal, bancomat o contanti)",
+      "note": "I prezzi indicati sono orientativi pertanto potrebbero subire variazioni in base a promozioni, sconti, last minute o altri fattori del momento.<br>I prezzi definitivi e le condizioni aggiornate verranno comunicati al momento della richiesta di prenotazione."
+    },
+    "about": {
+      "title": "Chi Siamo",
+      "text": "Siamo una famiglia romana che vive per l'arte dell'ospitalità. Con Casa Vacanze Elena ti offriamo un soggiorno che unisce comfort, autenticità e il calore delle tradizioni. Dal 2023, Roberta, superhost, e sua figlia Beatrice, cohost, mettono passione in ogni dettaglio per farti sentire davvero a casa."
+    },
+    "servicesRules": {
+      "title": "Servizi e Regole della Casa",
+      "servicesTitle": "Servizi",
+      "service": {
+        "wifi": "Wi-Fi ad alta velocità",
+        "ac": "Aria condizionata e riscaldamento",
+        "smartTV": "Smart TV",
+        "laundry": "Biancheria e asciugamani forniti",
+        "kitchen": "Cucina attrezzata",
+        "washer": "Lavatrice",
+        "selfCheckIn": "Self check-in",
+        "livingRoom": "Salone spazioso e confortevole",
+        "hairdryer": "Asciugacapelli",
+        "safe": "Cassaforte",
+        "elevator": "Ascensore",
+        "pets": "Animali domestici ammessi"
+      },
+      "details": {
+        "wifiTitle": "Connessione Internet Wi-Fi inclusa",
+        "wifiDescription": "Velocità elevata per streaming e lavoro senza interruzioni.",
+        "kitchenTitle": "Cucina con forno, microonde, bollitore, lavastoviglie",
+        "kitchenDescription": "La cucina è completamente attrezzata per soddisfare ogni esigenza culinaria.",
+        "diningTitle": "Zona pranzo con tavolo e sedie",
+        "diningDescription": "Spazio ideale per pranzi in famiglia.",
+        "bathroomTitle": "Bagno moderno con doccia e lavatrice",
+        "bathroomDescription": "Il bagno è dotato di tutti i comfort moderni per il tuo relax.",
+        "bedroomsTitle": "Due camere da letto con Smart TV",
+        "bedroomsDescription": "Camere spaziose e confortevoli per garantire un riposo rigenerante.",
+        "balconiesTitle": "Balconi esterni per relax e stendibiancheria",
+        "balconiesDescription": "Goditi l’aria fresca e il sole sui nostri ampi balconi."
+      },
+      "rulesTitle": "Regole della Casa",
+      "rulesIntro": "Ti chiediamo di trattare l'appartamento con la massima cura e rispetto, come se fosse la tua casa. Questo contribuirà a garantire un'esperienza piacevole per te e per i futuri ospiti. Grazie per la tua comprensione e collaborazione!",
+      "checkInOut": {
+        "title": "Check-in e Check-out",
+        "checkIn": "Check-in dopo le ore 15:00",
+        "checkOut": "Check-out entro le ore 10:00",
+        "selfCheckInPrefix": "Self check-in con",
+        "selfCheckInLink": "serratura elettronica"
+      },
+      "duringStay": {
+        "title": "Durante il soggiorno",
+        "maxGuests": "Massimo 6 ospiti",
+        "petsAllowed": "Animali domestici ammessi",
+        "quietHours": "Orari di silenzio: 22:00 - 08:00",
+        "noParties": "Vietato organizzare feste/eventi",
+        "advertisingAllowed": "Fotografia pubblicitaria consentita",
+        "noSmoking": "Non è consentito fumare"
+      }
+    },
+    "blog": {
+      "title": "Guide Locali",
+      "articleTitle": "Cosa vedere a Garbatella",
+      "articleText": "Garbatella è un quartiere di Roma dal fascino autentico, nato all'inizio del XX secolo e originariamente caratterizzato da un’atmosfera da \"quartiere paese\". Oggi, pur mantenendo la calma e la convivialità tipica delle comunità locali, si sta affermando come zona di tendenza. Le sue abitazioni a bassa altezza, organizzate in lotti attorno a cortili e giardini, creano spazi di incontro e di vita quotidiana. Il quartiere ospita numerosi punti di interesse storico e culturale, come piccole chiese e monumenti che testimoniano il suo passato, oltre a percorsi simbolici come la celebre \"via delle Sette Chiese\", che un tempo guidava i fedeli in pellegrinaggi tradizionali. Garbatella è anche rinomata per la sua offerta gastronomica informale: locali caratteristici propongono piatti tipici della cucina romana, dalla pizza a taglio a specialità di carne, accompagnati da gelaterie che valorizzano prodotti locali. Questa sintesi rende Garbatella una meta ideale per chi cerca un'esperienza genuina e meno turistica a Roma.",
+      "readMore": "Leggi di più"
+    }
+  }

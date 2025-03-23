@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Informazioni Legali - Casa Vacanze Elena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informazioni legali, privacy e gestione dei cookies per il sito Casa Vacanze Elena.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="../icon.svg" type="image/svg+xml">
+  
+  <!-- CSS principale -->
+  <link rel="stylesheet" href="../style.css">
+  
+  <!-- Stili aggiuntivi, se necessario -->
+  <style>
+    main {
+      padding: 2em 0;
+    }
+    main h2,
+    main h3,
+    main p,
+    main ul {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main section {
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header con menù (stile identico all'index, ma con link che puntano alla pagina index) -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../index.html"><img src="../logo.svg" alt="Casa Vacanze Elena"></a>
+      </div>
+      <!-- Pulsante per il menu mobile -->
+      <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#appartamento">L’Appartamento</a></li>
+          <li><a href="../index.html#contatti-posizione">Contatti & Posizione</a></li>
+          <li><a href="../index.html#servizi-regole">Servizi</a></li>
+          <li><a href="../index.html#chi-siamo">Chi Siamo</a></li>
+          <li><a href="../index.html#recensioni">Recensioni</a></li>
+          <li><a href="../index.html#blog">Guide Locali</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenuto principale -->
+  <main class="container">
+    <section id="privacy">
+      <h2>Privacy</h2>
+      <p>
+        La presente informativa è redatta in conformità al Regolamento UE 2016/679 (GDPR) e alle normative italiane in materia di protezione dei dati personali. Casa Vacanze Elena, in qualità di Titolare del Trattamento, si impegna a proteggere e rispettare la tua privacy.
+      </p>
+      
+      <h3>Titolare del Trattamento</h3>
+      <p>
+        <strong>Nome:</strong> Casa Vacanze Elena<br>
+        <strong>Indirizzo:</strong> [Inserire indirizzo completo]<br>
+        <strong>Contatto:</strong> [Inserire email e/o numero di telefono dedicato]
+      </p>
+      
+      <h3>Dati Raccolti</h3>
+      <p>
+        Il sito può raccogliere dati personali quali nome, cognome, indirizzo email, numero di telefono e dati relativi alla navigazione, esclusivamente per consentire la gestione delle prenotazioni, fornire assistenza e migliorare i nostri servizi.
+      </p>
+      
+      <h3>Finalità del Trattamento</h3>
+      <p>
+        I dati vengono trattati per:
+      </p>
+      <ul>
+        <li>Gestire le richieste di informazioni e prenotazioni;</li>
+        <li>Fornire assistenza e supporto;</li>
+        <li>Analizzare il traffico del sito per migliorarne i contenuti;</li>
+        <li>Inviare comunicazioni informative e, previo consenso, promozionali.</li>
+      </ul>
+      
+      <h3>Diritti degli Interessati</h3>
+      <p>
+        Gli utenti possono in qualsiasi momento esercitare i diritti di accesso, rettifica, cancellazione, limitazione del trattamento, opposizione e portabilità dei dati, contattando il Titolare del Trattamento ai recapiti sopra indicati.
+      </p>
+    </section>
+    
+    <section id="cookies">
+      <h2>Cookie Policy</h2>
+      <p>
+        Il sito Casa Vacanze Elena utilizza i cookie per migliorare la navigazione e personalizzare i contenuti. I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo.
+      </p>
+      
+      <h3>Tipologie di Cookie Utilizzati</h3>
+      <ul>
+        <li><strong>Cookie Tecnici:</strong> Essenziali per il corretto funzionamento del sito.</li>
+        <li><strong>Cookie Analitici:</strong> Utilizzati per raccogliere dati anonimi sul traffico e migliorare l’esperienza utente.</li>
+        <li><strong>Cookie di Terze Parti:</strong> Possono essere installati da partner esterni per finalità di marketing e analisi, sempre nel rispetto della normativa vigente.</li>
+      </ul>
+      
+      <h3>Gestione dei Cookie</h3>
+      <p>
+        Puoi decidere se accettare o rifiutare i cookie modificando le impostazioni del tuo browser. Tieni presente che la disattivazione dei cookie potrebbe limitare l’accesso ad alcune funzionalità del sito.
+      </p>
+      <p>
+        Per ulteriori informazioni su come gestire i cookie, consulta la sezione di supporto del tuo browser.
+      </p>
+    </section>
+  </main>
+
+  <!-- Pulsante Torna all'inizio -->
+  <button id="back-to-top" title="Torna all'inizio">↑</button>
+
+  <!-- Banner dei Cookies: verrà visualizzato se non è stato accettato il consenso -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      Utilizziamo cookies per migliorare la tua esperienza e per analizzare il traffico.
+      <a href="informazioni-legali.html">Scopri di più</a>.
+    </p>
+    <button onclick="window.acceptCookies()">Accetta</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="container footer-container">
+      <div class="footer-flex">
+        <div class="footer-copy">
+          &copy; <span id="current-year"></span> Casa Vacanze Elena - Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Inclusione dello script per aggiornare l'anno corrente -->
+  <script src="../script.js" defer></script>
+
+  <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@1.2.1/i18nextHttpBackend.min.js"></script>
+</body>
+</html>

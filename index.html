@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Titolo e meta per il SEO -->
+  <title>Casa Vacanze Elena</title>
+  <meta name="description"
+    content="Casa Vacanze Elena è un accogliente B&B nella storica Garbatella, Roma. Prenota ora il tuo soggiorno in un ambiente autentico e confortevole.">
+  <meta name="keywords" content="Casa Vacanze, B&B, Garbatella, Roma, prenotazioni, soggiorno, Casa Vacanze Elena">
+  <link rel="canonical" href="https://www.tuodominio.com/">
+
+  <!-- Favicon e Logo (per la favicon, sostituisci "favicon.png" con il percorso del tuo file) -->
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Utilizzo di un sans-serif moderno per i testi (Roboto) e di un serif elegante per i titoli (Playfair Display) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+
+  <!-- Link al CSS esterno -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@1.2.1/i18nextHttpBackend.min.js"></script>
+  <!-- Dati strutturati in JSON-LD per il SEO (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Casa Vacanze Elena",
+    "description": "Un accogliente B&B nel quartiere Garbatella di Roma, ideale per un soggiorno autentico.",
+    "url": "https://www.tuodominio.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Garbatella, 123",
+      "addressLocality": "Roma",
+      "addressRegion": "RM",
+      "addressCountry": "IT"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "150"
+    },
+    "image": "https://www.tuodominio.com/path/to/og-image.jpg"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <!-- Logo: utilizza un'immagine oppure una semplice scritta con font particolare -->
+      <div class="logo">
+        <img src="logo.svg" alt="Casa Vacanze Elena">
+      </div>
+      <!-- Selettore di lingua -->
+      <div id="language-switcher">
+        <select id="language-selector">
+          <option value="it">Italiano</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <!-- Pulsante per il menu mobile -->
+      <button id="menu-toggle" class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#appartamento" data-i18n="nav.apartment">L’Appartamento</a></li>
+          <li><a href="#contatti-posizione" data-i18n="nav.contacts">Contatti &amp; Posizione</a></li>
+          <li><a href="#listino-prezzi" data-i18n="nav.pricing">Listino Prezzi</a></li>
+          <li><a href="#servizi-regole" data-i18n="nav.services">Servizi</a></li>
+          <li><a href="#chi-siamo" data-i18n="nav.about">Chi Siamo</a></li>
+          <li><a href="#recensioni" data-i18n="nav.reviews">Recensioni</a></li>
+          <li><a href="#blog" data-i18n="nav.blog">Guide Locali</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sezione Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2 data-i18n="hero.welcome">Benvenuti a Casa Vacanze Elena</h2>
+      <p data-i18n="hero.description">Il tuo rifugio romano nella storica Garbatella</p>
+      <button onclick="location.href='#contatti-posizione'" data-i18n="hero.bookNow">Prenota Ora</button>
+    </div>
+  </section>
+
+  <!-- Sezione Descrizione -->
+  <section id="descrizione" class="section">
+    <div class="container descrizione-container">
+      <!-- Testo sulla sinistra -->
+      <div class="descrizione-testo">
+        <h2 data-i18n="descrizione.title">Descrizione</h2>
+        <p data-i18n="descrizione.text">
+          Casa Vacanze Elena è un appartamento luminoso e recentemente ristrutturato, pensato per accogliere ogni ospite
+          in un ambiente inclusivo e accessibile.
+          Situata a pochi passi dal quartiere Garbatella, a 100 metri dalla fermata della Metropolitana
+          linea B e 3 fermate dal Colosseo e molto vicina alla Basilica di San Paolo e ai quartieri Trastevere e
+          Testaccio,
+          in una posizione strategica per esplorare Roma in tutta sicurezza e comodità.
+        </p>
+        <button id="toggle-dettagli" class="scopri-di-piu" data-i18n="descrizione.button">Scopri di più</button>
+      </div>
+      <!-- Immagine sulla destra -->
+      <div class="descrizione-immagine">
+        <img src="immagini/foto_descrizione.jpg" alt="Casa Vacanze Elena">
+      </div>
+    </div>
+    <!-- Sezione Dettagli nascosta inizialmente -->
+    <div id="dettagli" class="dettagli" style="display: none;">
+      <div class="container">
+        <h2 data-i18n="dettagli.title">Dettagli dell'Alloggio</h2>
+
+        <h3 data-i18n="dettagli.spaceAndServices.title">Lo Spazio e i Servizi</h3>
+        <ul>
+          <li><strong data-i18n="dettagli.spaceAndServices.renovation">Ristrutturazione Recente:</strong> L'appartamento è stato recentemente ristrutturato per garantire
+            un ambiente moderno, funzionale e accogliente.</li>
+          <li>
+            <strong data-i18n="dettagli.spaceAndServices.accommodations.title">Sistemazioni:</strong>
+            <ul>
+              <li data-i18n="dettagli.spaceAndServices.accommodations.item1">Due ampie camere da letto, con balcone, dotate di smart TV da 40 pollici, in cui è possibile
+                aggiungere una culla su richiesta.</li>
+              <li data-i18n="dettagli.spaceAndServices.accommodations.item2">Un soggiorno spazioso con divano (letto) e balcone, che può ospitare comodamente fino a sei persone.
+              </li>
+              <li data-i18n="dettagli.spaceAndServices.accommodations.item3">Possibilità di aggiungere “nel divano letto” un sesto posto letto per un bambino (fino a 12 anni).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong data-i18n="dettagli.spaceAndServices.commonAreas.title">Aree Comuni:</strong>
+            <ul>
+              <li data-i18n="dettagli.spaceAndServices.commonAreas.item1">Zona pranzo con tavolo per i pasti.</li>
+              <li data-i18n="dettagli.spaceAndServices.commonAreas.item2">Area relax con divano per momenti di riposo.</li>
+              <li data-i18n="dettagli.spaceAndServices.commonAreas.item3">Grande angolo cottura attrezzato con lavastoviglie, bollitore, forno elettrico, microonde e
+                macchinetta per il caffè espresso.</li>
+            </ul>
+          </li>
+          <li>
+            <strong data-i18n="dettagli.spaceAndServices.bathroom.title">Bagno Funzionale:</strong>
+            <ul>
+              <li data-i18n="dettagli.spaceAndServices.bathroom.item1">Un bagno grande e confortevole con finestra, con due lavabi integrati in un mobile con cassetti, due
+                specchi, un bidet e una grande
+                doccia con box in cristallo.</li>
+              <li data-i18n="dettagli.spaceAndServices.bathroom.item2">Presenza di una lavatrice per la massima praticità.</li>
+            </ul>
+          </li>
+          <li data-i18n="dettagli.spaceAndServices.outdoorSpaces"><strong>Spazi Esterni:</strong> Due balconi ideali per rilassarsi, prendere il sole e stendere il bucato.
+          </li>
+          <li data-i18n="dettagli.spaceAndServices.freeServices"><strong>Servizi Gratuiti:</strong> Wi-Fi e due casseforti (una per ogni stanza) sono messi a disposizione
+            gratuitamente
+            per garantire il massimo comfort.</li>
+          <li data-i18n="dettagli.spaceAndServices.locationAccessibility"><strong>Ubicazione e Accessibilità:</strong> L'appartamento si trova al primo piano di un raffinato
+            condominio dotato di ascensore, rendendolo adatto anche a persone con disabilità.</li>
+
+        </ul>
+
+        <h3 data-i18n="dettagli.safetyInclusivity.title">Impegno per la Sicurezza e l'Inclusività</h3>
+        <p data-i18n="dettagli.safetyInclusivity.text">
+          Casa Vacanze Elena si impegna a creare un ambiente accogliente e inclusivo per ogni ospite, nel rispetto delle
+          disposizioni sanitarie vigenti. La perfetta sanificazione dell’appartamento e della biancheria è una priorità
+          per garantire la sicurezza e il benessere di chiunque scelga di soggiornare qui.
+        </p>
+
+        <h3  data-i18n="dettagli.additionalNotes.title">Note Aggiuntive</h3>
+        <ul>
+          <li data-i18n="dettagli.additionalNotes.item1"><strong>Posto Letto Extra:</strong> L'aggiunta del sesto posto letto per un bambino (fino a 12 anni)
+            comporta un costo aggiuntivo di 30€ a notte.</li>
+          <li data-i18n="dettagli.additionalNotes.item2"><strong>Accoglienza degli Animali:</strong> Gli animali di piccola e media taglia sono i benvenuti, con un
+            costo aggiuntivo di 60€ per soggiorno.</li>
+          <li data-i18n="dettagli.additionalNotes.item3"><strong>Numero di Registrazione CIN:</strong> IT058091C2A98L3HFB</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione Appartamento -->
+  <section id="appartamento" class="section">
+    <div class="container">
+
+      <h2>L’Appartamento</h2>
+      <div class="gallery">
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura9.jpg">
+          <img src="/immagini/angolo_cottura9.jpg" alt="Zona giorno">
+        </a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura10.jpg">
+          <img src="/immagini/angolo_cottura10.jpg" alt="Cucina attrezzata">
+        </a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto6.jpg">
+          <img src="/immagini/camera_letto6.jpg" alt="Camera da letto">
+        </a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto4.jpg">
+          <img src="/immagini/camera_letto4.jpg" alt="Camera da letto 2">
+        </a>
+        <a data-fancybox="gallery" href="/immagini/bagno.jpg">
+          <img src="/immagini/bagno.jpg" alt="Bagno moderno">
+        </a>
+        <a data-fancybox="gallery" href="/immagini/sfondo3.jpg">
+          <img src="/immagini/sfondo3.jpg" alt="Balcone">
+        </a>
+      </div>
+
+      <!-- Immagini aggiuntive per lo slider, non visibili sulla pagina -->
+      <div style="display: none;">
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura2.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura4.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura5.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura6.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura7.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura8.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/angolo_cottura11.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto1.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto2.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto3.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto5.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto7.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto8.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/camera_letto9.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/salotto.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/salotto2.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/bagno2.jpg"></a>
+        <a data-fancybox="gallery" href="/immagini/balcone.jpg"></a>
+        <!-- Aggiungi altri link se necessario -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione Recensioni -->
+  <section id="recensioni" class="section">
+    <div class="container recensioni-container">
+      <h2>Recensioni</h2>
+      <div class="recensioni-cards">
+        <!-- Recensione 1 -->
+        <div class="recensione-card">
+          <div class="recensione-header">
+            <h3>Hélène <span class="rating">★ ★ ★ ★ ★</span></h3>
+            <!--p class="review-date">1 settimana fa</p>-->
+          </div>
+          <p class="recensione-text">
+            La posizione è topissime a 50 metri dalla metropolitana Garbatella linea B. Tutti i servizi del quartiere
+            sono a due passi. L'appartamento è molto pulito, ben attrezzato e ideale per una famiglia di 5 persone.
+            Roberta è reattiva: abbiamo ricevuto una pentola grande in giornata e potuto lasciare i bagagli il giorno
+            della partenza. Consiglio questo alloggio di alto livello, degno dei migliori hotel!
+          </p>
+        </div>
+        <!-- Recensione 2 -->
+        <div class="recensione-card">
+          <div class="recensione-header">
+            <h3>Sabrina <span class="rating">★ ★ ★ ★ ★</span></h3>
+            <!--p class="review-date">ottobre 2024</p>-->
+          </div>
+          <p class="recensione-text">
+            La nostra visita a Roberta è stata fantastica. La posizione è ottima: dalla fermata della metropolitana
+            Garbatella si arriva al Colosseo in meno di 10 minuti. Alla prossima visita a Roma prenoteremmo di nuovo il
+            suo alloggio. Siamo stati più che felici! ❤️
+          </p>
+        </div>
+        <!-- Recensione 3 -->
+        <div class="recensione-card">
+          <div class="recensione-header">
+            <h3>Carmina <span class="rating">★ ★ ★ ★ ★</span></h3>
+            <!--p class="review-date">luglio 2024</p>-->
+          </div>
+          <p class="recensione-text">
+            Soggiorno con bambini: Roberta è stata molto disponibile e ha risposto a tutte le mie domande con ottime
+            spiegazioni. La vicinanza della stazione ferroviaria ha reso tutto più semplice, specialmente per mia nonna.
+            L'appartamento è perfetto per 5 persone e tutti i servizi hanno funzionato alla grande. Ci tornerei
+            sicuramente!
+          </p>
+        </div>
+      </div>
+      <p><a
+          href="https://www.airbnb.it/rooms/887394777670371852/reviews?source_impression_id=p3_1742161173_P3OS4DoqUvFsesDW#reviews"
+          target="_blank" data-i18n="reviews.all">Leggi tutte le recensioni</a>
+    </div>
+  </section>
+
+  <!-- Sezione Contatti e Posizione affiancate -->
+  <section id="contatti-posizione" class="section">
+    <div class="container">
+      <h2 data-i18n="contacts.title">Contatti, Prenotazioni e Posizione</h2>
+      <div class="contact-position-flex">
+        <!-- Sezione Contatti -->
+        <div class="contact-section">
+          <h3 data-i18n="contacts.contactsTitle">Contatti e Prenotazioni</h3>
+          <p data-i18n="contacts.contactsText">Richiedi informazioni o prenota il tuo soggiorno compilando il modulo sottostante.</p>
+
+          <!-- Blocco per il contatto telefonico -->
+          <div class="phone-contact">
+            <a href="tel:+393421613897">
+              <img src="immagini/phone.jpg" alt="Telefono" class="phone-icon">
+              <span data-i18n="contacts.callNow">Chiama ora: +39 3421613897</span>
+            </a>
+          </div>
+
+          <!-- FORM: IMPORTANTE: include <div id="form-status"></div> per mostrare messaggi -->
+          <form action="https://formspree.io/f/mrbpqokw" method="POST">
+            <input type="text" name="name" data-i18n="[placeholder]contacts.namePlaceholder" placeholder="Nome" required>
+            <input type="email" name="_replyto" placeholder="Email" required>
+            <input type="tel" name="phone" data-i18n="[placeholder]contacts.phonePlaceholder" placeholder="Telefono">
+            <label for="checkin" data-i18n="contacts.checkinLabel">Data di Arrivo:</label>
+            <input type="date" name="checkin" id="checkin" required>
+            <label for="checkout" data-i18n="contacts.checkoutLabel">Data di Partenza:</label>
+            <input type="date" name="checkout" id="checkout" required>
+            <input type="number" name="guests" data-i18n="[placeholder]contacts.guestsPlaceholder" placeholder="Numero di Ospiti" min="1" required>
+            <textarea name="message" data-i18n="[placeholder]contacts.messagePlaceholder" placeholder="Messaggio" rows="4"></textarea>
+            <button type="submit" data-i18n="contacts.submitButton">Invia Richiesta</button>
+          </form>
+          <!-- MODALE PER MESSAGGIO DI CONFERMA/ERRORE -->
+          <div id="form-modal" class="modal hidden">
+            <div class="modal-content">
+              <span class="modal-close" id="modal-close">&times;</span>
+              <div class="modal-icon" id="modal-icon"></div>
+              <p id="modal-message"></p>
+            </div>
+          </div>
+
+          <p>
+            <span data-i18n="contacts.airbnbText">Preferisci prenotare su Airbnb?</span>
+             <a href="https://www.airbnb.it/rooms/887394777670371852" target="_blank" data-i18n="contacts.airbnbLink">Clicca qui</a>
+          </p>
+          <!-- Badge Superhost -->
+          <div class="airbnb-badge">
+            <img src="immagini/airbnb-superhost-badge.jpg" alt="Airbnb Superhost">
+          </div>
+        </div>
+        <div class="right-column">
+          <!-- Sezione Posizione -->
+          <div class="position-section" id="posizione">
+            <h3 data-i18n="contacts.positionTitle">Posizione</h3>
+            <p data-i18n="contacts.positionText">Situato nella storica Garbatella, l’appartamento offre un’autentica esperienza romana con facile accesso a
+              metro e alle principali attrazioni della città.</p>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.201467802908!2d12.482187676458622!3d41.867011666107665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a7fc4e48eab%3A0x2ca6145c2adfd379!2sCirconvallazione%20Ostiense%2C%2080%2C%2000154%20Roma%20RM!5e0!3m2!1sit!2sit!4v1742635038527!5m2!1sit!2sit"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <!-- Come raggiungerci -->
+          <div class="come-raggiungerci">
+            <h3 data-i18n="contacts.howToReachTitle">Come raggiungerci</h3>
+            <p data-i18n="contacts.howToReachText">
+              Il quartiere è facilmente raggiungibile sia in macchina che con i mezzi pubblici.
+            </p>
+            <p data-i18n="contacts.byCar">
+              <strong>In macchina:</strong> Sia dall’aeroporto Leonardo da Vinci–Fiumicino che da quello di
+              Roma–Ciampino l’appartamento è raggiungibile in circa 25 minuti. Inoltre, per chi arriva in auto, è
+              disponibile un parcheggio libero proprio di fronte alla casa.
+            </p>
+            <p>
+              <strong data-i18n="contacts.byPublicTransport">Con i mezzi pubblici:</strong>
+            </p>
+            <ul>
+              <li data-i18n="contacts.transportFiumicino">
+                <strong>Da Fiumicino:</strong> Prendi un treno regionale che ti porta alla stazione Ostiense (uscita
+                Piazzale 12 Ottobre 1942) in circa 35 minuti. Da lì cammina per 10 minuti. Oppure prendi il Leonardo
+                Express fino a Termini (circa 32 minuti), quindi poi la Metro Linea B in direzione Laurentina; scendi a
+                Garbatella (uscita Via Giacinto Pullino) e cammina per circa 100 metri oppure puoi prendere.
+              </li>
+              <li data-i18n="contacts.transportCiampino">
+                <strong>Da Ciampino:</strong> Usa un bus navetta fino a Termini e segui lo stesso percorso indicato per
+                Fiumicino.
+              </li>
+              <li data-i18n="contacts.transportTermini">
+                <strong>Da Termini:</strong> Prendi direttamente la Metro Linea B fino alla fermata Garbatella (uscita
+                Via Giacinto Pullino) e prosegui a piedi per 100 metri.
+              </li>
+              <li data-i18n="contacts.transportTiburtina">
+                <strong>Da Tiburtina:</strong> La Metro Linea B impiega circa 22 minuti per portarti all’appartamento.
+              </li>
+            </ul>
+            <!-- Scheda espandibile "Muoversi in zona" -->
+            <div class="muoversi-zona" style="margin-top: 1em;">
+              <button id="toggle-muoversi" class="scopri-di-piu" data-i18n="contacts.toggleHowToReach">Scopri come muoversi in zona</button>
+              <div id="muoversi-content" style="display: none; margin-top: 1em;">
+                <h4 data-i18n="contacts.howToReachSubTitle">Muoversi in zona</h4>
+                <p data-i18n="contacts.howToReachSubText">
+                  La casa vacanze Elena si trova in Circonvallazione Ostiense, a pochi passi dallo storico quartiere
+                  Garbatella, una delle zone più affascinanti e autentiche di Roma. La posizione è ideale per esplorare
+                  la città, poiché l’appartamento è vicino ai quartieri vivaci e ricchi di locali e ristoranti come
+                  Trastevere, Testaccio e Ostiense, oltre a essere facilmente accessibile alle principali facoltà
+                  dell'Università degli Studi di Roma Tre. La zona è ben servita dai mezzi pubblici, rendendo gli
+                  spostamenti rapidi e comodi.
+                </p>
+                <ul>
+                  <strong data-i18n="contacts.howToReachSubItem1">Collegamenti con i mezzi pubblici:</strong>
+                  <li data-i18n="contacts.howToReachSubItem2">A 100 metri dalla fermata della metropolitana Garbatella (Linea B, uscita Via Giacinto Pullino).
+                  </li>
+                  <li data-i18n="contacts.howToReachSubItem3">A 3 fermate dal Colosseo e a 5 fermate dalla stazione Termini (interconnessione con la linea A e
+                    treni nazionali/internazionali).</li>
+                  <li data-i18n="contacts.howToReachSubItem4">La Linea B collega facilmente all'EUR e al treno Roma-Lido per Ostia.</li>
+                  <strong data-i18n="contacts.howToReachSubItem5">Autobus nelle vicinanze:</strong>
+                  <li data-i18n="contacts.howToReachSubItem6">Fermata autobus #715 e #716 a 100 metri, che porta a Piazza Venezia e Via del Corso in 15 minuti.
+                  </li>
+                  <li data-i18n="contacts.howToReachSubItem7">Fermata autobus #792 sotto l'appartamento per San Giovanni in Laterano in 15 minuti.</li>
+                  <li data-i18n="contacts.howToReachSubItem8">Fermata autobus #23 a 500 metri per esplorare il Lungotevere e visitare punti di interesse come
+                    Testaccio, Ghetto Ebraico, Trastevere, Campo de' Fiori e Città del Vaticano.</li>
+                  <strong data-i18n="contacts.howToReachSubItem9">Accesso alla Città del Vaticano:</strong>
+                  <li data-i18n="contacts.howToReachSubItem10">A 14 minuti a piedi dalla stazione Ostiense, con treno per San Pietro in soli 8 minuti.</li>
+                </ul>
+                <p data-i18n="contacts.howToReachSubConclusion">
+                  In sintesi, la casa vacanze Elena è perfettamente posizionata per chi desidera esplorare Roma con
+                  facilità, grazie alla sua vicinanza a mezzi pubblici e attrazioni turistiche, ma anche per chi vuole
+                  vivere l’atmosfera autentica dei quartieri storici e delle tradizioni romane.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione Listino Prezzi -->
+  <section id="listino-prezzi" class="section">
+    <div class="container">
+      <div class="listino-prezzi">
+        <h3 data-i18n="pricing.title">Listino Prezzi (fino a 4 persone)</h3>
+        
+        <h4 data-i18n="pricing.nightlyRates">Tariffe per Notte</h4>
+        <table class="listino-prezzi-tabella">
+          <thead>
+            <tr>
+              <th data-i18n="pricing.season">Stagione</th>
+              <th data-i18n="pricing.pricePerNight">Prezzo per Notte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span data-i18n="pricing.lowSeason">Bassa Stagione</span><br>
+                <small data-i18n="pricing.lowSeasonInfo">(Gennaio, Febbraio, Novembre, Dicembre)</small>
+              </td>
+              <td>100€</td>
+            </tr>
+            <tr>
+              <td>
+                <span data-i18n="pricing.mediumSeason">Media Stagione</span><br>
+                <small data-i18n="pricing.mediumSeasonInfo">(Luglio, Agosto)</small>
+              </td>
+              <td>130€</td>
+            </tr>
+            <tr>
+              <td>
+                <span data-i18n="pricing.highSeason">Alta Stagione</span><br>
+                <small data-i18n="pricing.highSeasonInfo">(Marzo, Aprile, Maggio, Giugno, Settembre, Ottobre)</small>
+              </td>
+              <td>150€</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h4 data-i18n="pricing.taxesAndFees">Tasse e Maggiorazioni</h4>
+        <ul>
+          <li>
+            <strong data-i18n="pricing.touristTaxLabel">Tassa di soggiorno:</strong>
+            <span data-i18n="pricing.touristTaxInfo">5€ a notte (minori di 10 anni esenti)</span>
+          </li>
+          <li>
+            <strong data-i18n="pricing.cleaningLabel">Pulizie:</strong>
+            <span data-i18n="pricing.cleaningInfo">50€ a soggiorno (obbligatorie)</span>
+          </li>
+          <li>
+            <strong data-i18n="pricing.animalsLabel">Animali:</strong>
+            <span data-i18n="pricing.animalsInfo">50€ a soggiorno (su richiesta)</span>
+          </li>
+          <li>
+            <strong data-i18n="pricing.cradleLabel">Culla:</strong>
+            <span data-i18n="pricing.cradleInfo">50€ a soggiorno (su richiesta)</span>
+          </li>
+          <li>
+            <strong data-i18n="pricing.fifthBedLabel">5° letto:</strong>
+            <span data-i18n="pricing.fifthBedInfo">30€ a notte (su richiesta)</span>
+          </li>
+          <li>
+            <strong data-i18n="pricing.sixthBedLabel">6° letto:</strong>
+            <span data-i18n="pricing.sixthBedInfo">30€ a notte (su richiesta)</span>
+          </li>
+        </ul>
+        
+        <h4 data-i18n="pricing.paymentMethods">Modalità di Pagamento</h4>
+        <p data-i18n="pricing.paymentInfo">
+          20% alla prenotazione con bonifico<br>
+          80% in struttura al check-in (bonifico bancario, PayPal, bancomat o contanti)
+        </p>
+  
+        <p class="listino-note" data-i18n="pricing.note">
+          I prezzi indicati sono orientativi pertanto potrebbero subire variazioni in base a promozioni, sconti, last minute o altri fattori del momento.<br>
+          I prezzi definitivi e le condizioni aggiornate verranno comunicati al momento della richiesta di prenotazione.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione Chi Siamo -->
+  <section id="chi-siamo" class="section">
+    <div class="container">
+      <h2 data-i18n="about.title">Chi Siamo</h2>
+      <p data-i18n="about.text">
+        Siamo una famiglia romana che vive per l'arte dell'ospitalità. Con Casa Vacanze Elena ti offriamo un soggiorno
+        che unisce comfort, autenticità e il calore delle tradizioni. Dal 2023, Roberta, superhost, e sua figlia
+        Beatrice, cohost, mettono passione in ogni dettaglio per farti sentire davvero a casa.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sezione Servizi e Regole della Casa -->
+  <section id="servizi-regole" class="section">
+    <div class="container">
+      <h2 data-i18n="servicesRules.title">Servizi e Regole della Casa</h2>
+
+      <!-- Inizio blocco Servizi -->
+      <div class="servizi">
+        <h3 data-i18n="servicesRules.servicesTitle">Servizi</h3>
+
+        <!-- Griglia di card con icone e descrizione sintetica -->
+        <div class="servizi-grid">
+          <div class="servizio">
+            <i class="fas fa-wifi"></i>
+            <span data-i18n="servicesRules.service.wifi">Wi-Fi ad alta velocità</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-temperature-high"></i>
+            <span data-i18n="servicesRules.service.ac">Aria condizionata e riscaldamento</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-tv"></i>
+            <span data-i18n="servicesRules.service.smartTV">Smart TV</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-bed"></i>
+            <span data-i18n="servicesRules.service.laundry">Biancheria e asciugamani forniti</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-utensils"></i>
+            <span data-i18n="servicesRules.service.kitchen">Cucina attrezzata</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-soap"></i>
+            <span data-i18n="servicesRules.service.washer">Lavatrice</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-key"></i>
+            <span data-i18n="servicesRules.service.selfCheckIn">Self check-in</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-couch"></i>
+            <span data-i18n="servicesRules.service.livingRoom">Salone spazioso e confortevole</span>
+          </div>
+          <div class="servizio asciugacapelli">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+              focusable="false" style="display: block; height: 24px; width: 24px; fill: currentcolor;">
+              <path
+                d="M14 27v.2a4 4 0 0 1-3.8 3.8H4v-2h6.15a2 2 0 0 0 1.84-1.84L12 27zM10 1c.54 0 1.07.05 1.58.14l.38.07 17.45 3.65a2 2 0 0 1 1.58 1.79l.01.16v6.38a2 2 0 0 1-1.43 1.91l-.16.04-13.55 2.83 1.76 6.5A2 2 0 0 1 15.87 27l-.18.01h-3.93a2 2 0 0 1-1.88-1.32l-.05-.15-1.88-6.76A9 9 0 0 1 10 1zm5.7 24-1.8-6.62-1.81.38a9 9 0 0 1-1.67.23h-.33L11.76 25zM10 3a7 7 0 1 0 1.32 13.88l.33-.07L29 13.18V6.8L11.54 3.17A7.03 7.03 0 0 0 10 3zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z">
+              </path>
+            </svg>
+            <span data-i18n="servicesRules.service.hairdryer">Asciugacapelli</span>
+          </div>
+          <!-- Nuova card per Cassaforte -->
+          <div class="servizio">
+            <!-- SVG inlined -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation"
+              focusable="false" style="display: block; height: 2em; width: 2em; fill: currentColor;">
+              <path
+                d="M25 2a5 5 0 0 1 5 4.78V25a5 5 0 0 1-4.78 5H7a5 5 0 0 1-5-4.78V7a5 5 0 0 1 4.78-5H7zm0 2H7a3 3 0 0 0-3 2.82V11h2V6h20v20H6v-5H4v4a3 3 0 0 0 2.82 3H25a3 3 0 0 0 3-2.82V7a3 3 0 0 0-2.82-3zm-1 4H8v16h16zm-8 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM6 13H4v6h2z">
+              </path>
+            </svg>
+            <span data-i18n="servicesRules.service.safe">Cassaforte</span>
+          </div>
+          <div class="servizio">
+            <!-- Icona dell'ascensore -->
+            <svg style="display: inline-block; width: 2em; height: 2em;" aria-hidden="true" viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect stroke-width="4" stroke="currentColor" fill="none" ry="2" rx="2" height="28" width="24" y="2" x="4">
+              </rect>
+              <polygon fill="currentColor" points="16,10 12,14 20,14"></polygon>
+              <polygon fill="currentColor" points="16,22 20,18 12,18"></polygon>
+            </svg>
+            <span data-i18n="servicesRules.service.elevator">Ascensore</span>
+          </div>
+          <div class="servizio">
+            <i class="fas fa-paw"></i>
+            <span data-i18n="servicesRules.service.pets">Animali domestici ammessi</span>
+          </div>
+        </div>
+
+        <!-- Elenco puntato aggiuntivo (opzionale) -->
+        <table class="servizi-tabella">
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.wifiTitle">Connessione Internet Wi-Fi inclusa</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.wifiDescription">Velocità elevata per streaming e lavoro senza interruzioni.</td>
+          </tr>
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.kitchenTitle">Cucina con forno, microonde, bollitore, lavastoviglie</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.kitchenDescription">La cucina è completamente attrezzata per soddisfare ogni esigenza
+              culinaria.</td>
+          </tr>
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.diningTitle">Zona pranzo con tavolo e sedie</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.diningDescription">Spazio ideale per pranzi in famiglia.</td>
+          </tr>
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.bathroomTitle">Bagno moderno con doccia e lavatrice</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.bathroomDescription">Il bagno è dotato di tutti i comfort moderni per il tuo relax.</td>
+          </tr>
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.bedroomsTitle">Due camere da letto con Smart TV</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.bedroomsDescription">Camere spaziose e confortevoli per garantire un riposo rigenerante.</td>
+          </tr>
+          <tr>
+            <td class="servizio-label"><strong data-i18n="servicesRules.details.balconiesTitle">Balconi esterni per relax e stendibiancheria</strong></td>
+            <td class="servizio-descrizione" data-i18n="servicesRules.details.balconiesDescription">Goditi l’aria fresca e il sole sui nostri ampi balconi.</td>
+          </tr>
+        </table>
+      </div>
+      <!-- Fine blocco Servizi -->
+
+      <!-- Inizio blocco Regole -->
+      <div class="regole">
+        <h3 data-i18n="servicesRules.rulesTitle">Regole della Casa</h3>
+        <p class="regole-intro" data-i18n="servicesRules.rulesIntro">
+          Ti chiediamo di trattare l'appartamento con la massima cura e rispetto, come se fosse la tua casa. Questo
+          contribuirà a garantire un'esperienza piacevole per te e per i futuri ospiti. Grazie per la tua comprensione e
+          collaborazione!
+        </p>
+        <div class="regole-section">
+          <h4 data-i18n="servicesRules.checkInOut.title">Check-in e Check-out</h4>
+          <ul>
+            <li data-i18n="servicesRules.checkInOut.checkIn">Check-in dopo le ore 15:00</li>
+            <li data-i18n="servicesRules.checkInOut.checkOut">Check-out entro le ore 10:00</li>
+            <li>
+              Self check-in con <a data-fancybox="selfCheckIn" href="immagini/self_checkin.jpg" class="checkin-link">serratura elettronica</a>
+            </li>
+          </ul>
+        </div>
+        <div class="regole-section">
+          <h4 data-i18n="servicesRules.duringStay.title">Durante il soggiorno</h4>
+          <ul>
+            <li data-i18n="servicesRules.duringStay.maxGuests">Massimo 6 ospiti</li>
+            <li data-i18n="servicesRules.duringStay.petsAllowed">Animali domestici ammessi</li>
+            <li data-i18n="servicesRules.duringStay.quietHours">Orari di silenzio: 22:00 - 08:00</li>
+            <li data-i18n="servicesRules.duringStay.noParties">Vietato organizzare feste/eventi</li>
+            <li data-i18n="servicesRules.duringStay.advertisingAllowed">Fotografia pubblicitaria consentita</li>
+            <li data-i18n="servicesRules.duringStay.noSmoking">Non è consentito fumare</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Fine blocco Regole -->
+
+    </div>
+  </section>
+
+  <!-- Sezione Guide Locali/Blog -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 data-i18n="blog.title">Guide Locali</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="immagini/Roma_Garbatella_teatro_Palladium.jpg" alt="Cosa vedere a Garbatella">
+          <div class="blog-content">
+            <h3 data-i18n="blog.articleTitle">Cosa vedere a Garbatella</h3>
+            <p data-i18n="blog.articleText">
+              Garbatella è un quartiere di Roma dal fascino autentico, nato all'inizio del XX secolo e originariamente
+              caratterizzato da un’atmosfera da "quartiere paese". Oggi, pur mantenendo la calma e la convivialità
+              tipica delle comunità locali, si sta affermando come zona di tendenza. Le sue abitazioni a bassa altezza,
+              organizzate in lotti attorno a cortili e giardini, creano spazi di incontro e di vita quotidiana. Il
+              quartiere ospita numerosi punti di interesse storico e culturale, come piccole chiese e monumenti che
+              testimoniano il suo passato, oltre a percorsi simbolici come la celebre "via delle Sette Chiese", che un
+              tempo guidava i fedeli in pellegrinaggi tradizionali. Garbatella è anche rinomata per la sua offerta
+              gastronomica informale: locali caratteristici propongono piatti tipici della cucina romana, dalla pizza a
+              taglio a specialità di carne, accompagnati da gelaterie che valorizzano prodotti locali. Questa sintesi
+              rende Garbatella una meta ideale per chi cerca un'esperienza genuina e meno turistica a Roma.
+            </p>
+            <a href="#" class="read-more" data-i18n="blog.readMore">Leggi di più</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-flex">
+        <div class="footer-social">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/393421613897" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="InformazioniLegali/informazioni-legali.html" target="_blank">Informazioni Legali</a>
+        </div>
+        <div class="footer-copy">
+          © <span id="current-year"></span> Casa Vacanze Elena. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pulsante Torna all'inizio -->
+  <button id="back-to-top" title="Torna all'inizio">↑</button>
+
+  <!-- Banner Cookies -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Utilizziamo cookies per migliorare la tua esperienza e per analizzare il traffico.
+      <a href="InformazioniLegali/informazioni-legali.html" target="_blank">Scopri di più</a>.
+    </p>
+    <button onclick="acceptCookies()">Accetta</button>
+  </div>
+
+  <!-- Inclusione dello script esterno -->
+  <script src="script.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
