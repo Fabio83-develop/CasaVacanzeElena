@@ -11,6 +11,8 @@
     content="Casa Vacanze Elena è un accogliente B&B nella storica Garbatella, Roma. Prenota ora il tuo soggiorno in un ambiente autentico e confortevole.">
   <meta name="keywords" content="Casa Vacanze, B&B, Garbatella, Roma, prenotazioni, soggiorno, Casa Vacanze Elena">
   <link rel="canonical" href="https://www.tuodominio.com/">
+  <link rel="alternate" hreflang="it" href="https://www.tuodominio.com/">
+  <link rel="alternate" hreflang="en" href="https://www.tuodominio.com/en/">
 
   <!-- Favicon e Logo (per la favicon, sostituisci "favicon.png" con il percorso del tuo file) -->
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -22,23 +24,31 @@
 
   <!-- Link al CSS esterno -->
   <link rel="stylesheet" href="style.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ 
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Casa Vacanze Elena – B&B a Garbatella, Roma">
+  <meta property="og:description" content="Scopri Casa Vacanze Elena, il tuo rifugio romano nella storica Garbatella. Prenota ora per un soggiorno autentico a Roma!">
+  <meta property="og:image" content="https://www.tuodominio.com/immagini/sfondo4.jpg">
+  <meta property="og:url" content="https://www.tuodominio.com/">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+
   <script src="https://unpkg.com/i18next@21/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@1.2.1/i18nextHttpBackend.min.js"></script>
   <!-- Dati strutturati in JSON-LD per il SEO (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Hotel",
+    "@type": "BedAndBreakfast",
     "name": "Casa Vacanze Elena",
     "description": "Un accogliente B&B nel quartiere Garbatella di Roma, ideale per un soggiorno autentico.",
     "url": "https://www.tuodominio.com/",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Via Garbatella, 123",
+      "streetAddress": "Circonvallazione Ostiense, 80",
       "addressLocality": "Roma",
       "addressRegion": "RM",
       "addressCountry": "IT"
@@ -48,7 +58,8 @@
       "ratingValue": "4.8",
       "reviewCount": "150"
     },
-    "image": "https://www.tuodominio.com/path/to/og-image.jpg"
+    "image": "https://www.tuodominio.com/immagini/sfondo4.jpg",
+    "priceRange": "$$"
   }
   </script>
 </head>
@@ -303,7 +314,7 @@
           </div>
 
           <!-- FORM: IMPORTANTE: include <div id="form-status"></div> per mostrare messaggi -->
-          <form action="https://formspree.io/f/mrbpqokw" method="POST">
+          <form action="send_mail2.php" method="POST">
             <input type="text" name="name" data-i18n="[placeholder]contacts.namePlaceholder" placeholder="Nome" required>
             <input type="email" name="_replyto" placeholder="Email" required>
             <input type="tel" name="phone" data-i18n="[placeholder]contacts.phonePlaceholder" placeholder="Telefono">
